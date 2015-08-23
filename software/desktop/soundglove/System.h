@@ -1,0 +1,12 @@
+#pragma once
+
+//#define LOG_PACKET_RATE
+#define LOG_PACKET_RATE_NUM_READOUTS  25000
+#define LOG_PACKET_RATE_NUM_DISCARDS    500
+
+//#define LOG_ACCURACY
+#define LOG_ACCURACY_FILE "accuracy.csv"
+
+//#define USE_TEMPERATURE_COMPENSATION
+
+//#define LOG_COMPRESSED_READOUT_SIZES

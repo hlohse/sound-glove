@@ -1,0 +1,25 @@
+#ifndef SYSTEM_H_
+#define SYSTEM_H_
+
+//#define SYSTEM_BENCHMARK_BLUETOOTH // Comment out for regular usage
+
+// CLOCK
+//#define SYSTEM_CLOCK_8_MHZ
+//#define SYSTEM_CLOCK_20_10_MHZ
+#define SYSTEM_CLOCK_25_6_MHZ
+
+// READOUT
+//#define SYSTEM_SPI_BLOCKING
+#define SYSTEM_SPI_ASYNC
+//#define SYSTEM_SPI_ASYNC_WITH_DMA
+
+// SPP
+#define SYSTEM_SPP_INCREASE_TRANSMIT_BUFFER
+
+// OUTPUT POWER
+//#define SYSTEM_BLUETOOTH_MAX_OUTPUT_POWER
+
+// LOG LATENCY
+//#define SYSTEM_LOG_LATENCY
+
+#endif /* SYSTEM_H_ */

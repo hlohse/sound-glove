@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2DE7DF35-D8F5-48E8-B027-8D70CF9885E2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libsoundglove</RootNamespace>
+    <ProjectName>soundglove</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <CustomBuildAfterTargets>
+    </CustomBuildAfterTargets>
+    <OutDir>$(Configuration)\</OutDir>
+    <IncludePath>C:\Program Files %28x86%29\irrlicht-1.8.1\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\Program Files %28x86%29\irrlicht-1.8.1\include;thirdparty;$(IncludePath)</IncludePath>
+    <LinkIncremental>true</LinkIncremental>
+    <CustomBuildAfterTargets />
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <CustomBuildAfterTargets>
+    </CustomBuildAfterTargets>
+    <OutDir>$(Configuration)\</OutDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Program Files %28x86%29\irrlicht-1.8.1\include</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>thirdparty;$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Program Files %28x86%29\irrlicht-1.8.1\include</IncludePath>
+    <LinkIncremental>false</LinkIncremental>
+    <CustomBuildAfterTargets />
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;SOUNDGLOVE_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\common</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ws2_32.lib;setupapi.lib;Irrlicht.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\irrlicht-1.8.1\lib\Win64-visualStudio</AdditionalLibraryDirectories>
+    </Link>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+    <PostBuildEvent>
+      <Command>xcopy /Y "$(ProjectDir)$(Configuration)\$(ProjectName).dll" "$(SolutionDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;SOUNDGLOVE_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\common</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ws2_32.lib;setupapi.lib;Irrlicht.lib;teVirtualMIDI64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>thirdparty;C:\Program Files %28x86%29\irrlicht-1.8.1\lib\Win64-visualStudio</AdditionalLibraryDirectories>
+    </Link>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+    <PostBuildEvent>
+      <Command>xcopy /Y "$(ProjectDir)$(Configuration)\$(ProjectName).dll" "$(SolutionDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBSOUNDGLOVE_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\common</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>ws2_32.lib;setupapi.lib;Irrlicht.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\irrlicht-1.8.1\lib\Win64-visualStudio</AdditionalLibraryDirectories>
+    </Link>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+    <PostBuildEvent>
+      <Command>xcopy /Y "$(ProjectDir)$(Configuration)\$(ProjectName).dll" "$(SolutionDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;SOUNDGLOVE_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\common</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>ws2_32.lib;setupapi.lib;Irrlicht.lib;teVirtualMIDI64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\irrlicht-1.8.1\lib\Win64-visualStudio;thirdparty</AdditionalLibraryDirectories>
+    </Link>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+    <PostBuildEvent>
+      <Command>xcopy /Y "$(ProjectDir)$(Configuration)\$(ProjectName).dll" "$(SolutionDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\common\Calibration.h" />
+    <ClInclude Include="..\..\common\Command.h" />
+    <ClInclude Include="..\..\common\Context.h" />
+    <ClInclude Include="..\..\common\Deserializer.h" />
+    <ClInclude Include="..\..\common\DummyCommand.h" />
+    <ClInclude Include="..\..\common\Export.h" />
+    <ClInclude Include="..\..\common\HandshakeCommand.h" />
+    <ClInclude Include="..\..\common\HeadingAnswer.h" />
+    <ClInclude Include="..\..\common\HeadingCommand.h" />
+    <ClInclude Include="..\..\common\IntegrateGAnswer.h" />
+    <ClInclude Include="..\..\common\IntegrateGCommand.h" />
+    <ClInclude Include="..\..\common\ISerializeable.h" />
+    <ClInclude Include="..\..\common\ISerialPort.h" />
+    <ClInclude Include="..\..\common\LSM9DS0.h" />
+    <ClInclude Include="..\..\common\MARGConfiguration.h" />
+    <ClInclude Include="..\..\common\Matrix.h" />
+    <ClInclude Include="..\..\common\MeanAnswer.h" />
+    <ClInclude Include="..\..\common\MeanCommand.h" />
+    <ClInclude Include="..\..\common\Platform.h" />
+    <ClInclude Include="..\..\common\Readout.h" />
+    <ClInclude Include="..\..\common\ReadoutCommand.h" />
+    <ClInclude Include="..\..\common\References.h" />
+    <ClInclude Include="..\..\common\SendBatteryChargeCommand.h" />
+    <ClInclude Include="..\..\common\SendCalibrationCommand.h" />
+    <ClInclude Include="..\..\common\Serialization.h" />
+    <ClInclude Include="..\..\common\Serializer.h" />
+    <ClInclude Include="..\..\common\SetCalibrationCommand.h" />
+    <ClInclude Include="..\..\common\SharedPointer.h" />
+    <ClInclude Include="..\..\common\StartReadoutCommand.h" />
+    <ClInclude Include="..\..\common\StopReadoutCommand.h" />
+    <ClInclude Include="..\..\common\StopWatchCommand.h" />
+    <ClInclude Include="..\..\common\TemperatureCommand.h" />
+    <ClInclude Include="..\..\common\Vector.h" />
+    <ClInclude Include="..\..\common\VibrationPeriodCommand.h" />
+    <ClInclude Include="ArmPart.h" />
+    <ClInclude Include="Battery.h" />
+    <ClInclude Include="BluetoothGuard.h" />
+    <ClInclude Include="BluetoothSPP.h" />
+    <ClInclude Include="Calibrate.h" />
+    <ClInclude Include="EulerAngle.h" />
+    <ClInclude Include="Finger.h" />
+    <ClInclude Include="Formatter.h" />
+    <ClInclude Include="Glove.h" />
+    <ClInclude Include="Hand.h" />
+    <ClInclude Include="HandTranslation.h" />
+    <ClInclude Include="MARG.h" />
+    <ClInclude Include="MARGRotation.h" />
+    <ClInclude Include="MARGRotationFactory.h" />
+    <ClInclude Include="MARGRotationMadgwick.h" />
+    <ClInclude Include="MARGRotationMahony.h" />
+    <ClInclude Include="Midi.h" />
+    <ClInclude Include="MIDIController.h" />
+    <ClInclude Include="MIDINote.h" />
+    <ClInclude Include="MidiPort.h" />
+    <ClInclude Include="MidiSignal.h" />
+    <ClInclude Include="Motion.h" />
+    <ClInclude Include="Quaternion.h" />
+    <ClInclude Include="SerialPort.h" />
+    <ClInclude Include="System.h" />
+    <ClInclude Include="Temperature.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="Visualization.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\common\Calibration.cpp" />
+    <ClCompile Include="..\..\common\Command.cpp" />
+    <ClCompile Include="..\..\common\Deserializer.cpp" />
+    <ClCompile Include="..\..\common\DummyCommand.cpp" />
+    <ClCompile Include="..\..\common\HandshakeCommand.cpp" />
+    <ClCompile Include="..\..\common\HeadingAnswer.cpp" />
+    <ClCompile Include="..\..\common\HeadingCommand.cpp" />
+    <ClCompile Include="..\..\common\IntegrateGAnswer.cpp" />
+    <ClCompile Include="..\..\common\IntegrateGCommand.cpp" />
+    <ClCompile Include="..\..\common\MARGConfiguration.cpp" />
+    <ClCompile Include="..\..\common\MeanAnswer.cpp" />
+    <ClCompile Include="..\..\common\MeanCommand.cpp" />
+    <ClCompile Include="..\..\common\Readout.cpp" />
+    <ClCompile Include="..\..\common\ReadoutCommand.cpp" />
+    <ClCompile Include="..\..\common\References.cpp" />
+    <ClCompile Include="..\..\common\SendBatteryChargeCommand.cpp" />
+    <ClCompile Include="..\..\common\SendCalibrationCommand.cpp" />
+    <ClCompile Include="..\..\common\Serialization.cpp" />
+    <ClCompile Include="..\..\common\Serializer.cpp" />
+    <ClCompile Include="..\..\common\SetCalibrationCommand.cpp" />
+    <ClCompile Include="..\..\common\StartReadoutCommand.cpp" />
+    <ClCompile Include="..\..\common\StopReadoutCommand.cpp" />
+    <ClCompile Include="..\..\common\StopWatchCommand.cpp" />
+    <ClCompile Include="..\..\common\TemperatureCommand.cpp" />
+    <ClCompile Include="..\..\common\VibrationPeriodCommand.cpp" />
+    <ClCompile Include="ArmPart.cpp" />
+    <ClCompile Include="Battery.cpp" />
+    <ClCompile Include="BluetoothGuard.cpp" />
+    <ClCompile Include="BluetoothSPP.cpp" />
+    <ClCompile Include="Calibrate.cpp" />
+    <ClCompile Include="dllmain.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="EulerAngle.cpp" />
+    <ClCompile Include="Finger.cpp" />
+    <ClCompile Include="Glove.cpp" />
+    <ClCompile Include="Hand.cpp" />
+    <ClCompile Include="HandTranslation.cpp" />
+    <ClCompile Include="MARG.cpp" />
+    <ClCompile Include="MARGRotation.cpp" />
+    <ClCompile Include="MARGRotationFactory.cpp" />
+    <ClCompile Include="MARGRotationMadgwick.cpp" />
+    <ClCompile Include="MARGRotationMahony.cpp" />
+    <ClCompile Include="Midi.cpp" />
+    <ClCompile Include="MIDIController.cpp" />
+    <ClCompile Include="MIDINote.cpp" />
+    <ClCompile Include="MidiPort.cpp" />
+    <ClCompile Include="MidiSignal.cpp" />
+    <ClCompile Include="Motion.cpp" />
+    <ClCompile Include="Quaternion.cpp" />
+    <ClCompile Include="SerialPort.cpp" />
+    <ClCompile Include="Temperature.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="Visualization.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

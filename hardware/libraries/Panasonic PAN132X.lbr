@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE eagle SYSTEM "eagle.dtd">
+<eagle version="7.2.0">
+<drawing>
+<settings>
+<setting alwaysvectorfont="no"/>
+<setting verticaltext="up"/>
+</settings>
+<grid distance="0.05" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.05" altunitdist="mm" altunit="mm"/>
+<layers>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
+<layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+</layers>
+<library>
+<packages>
+<package name="BOARD">
+<wire x1="-4.55" y1="4.8" x2="-2.55" y2="4.8" width="0.127" layer="21"/>
+<wire x1="-2.55" y1="4.8" x2="2.55" y2="4.8" width="0.127" layer="21"/>
+<wire x1="2.55" y1="4.8" x2="4.55" y2="4.8" width="0.127" layer="21"/>
+<wire x1="4.55" y1="4.8" x2="4.55" y2="-4.8" width="0.127" layer="21"/>
+<wire x1="4.55" y1="-4.8" x2="-4.55" y2="-4.8" width="0.127" layer="21"/>
+<smd name="D_GND" x="3.95" y="3.9" dx="0.65" dy="0.65" layer="1" roundness="33"/>
+<smd name="B_GND" x="3.95" y="2.1" dx="0.8" dy="0.8" layer="1" roundness="33"/>
+<smd name="12_GND" x="3.95" y="0.3" dx="0.8" dy="0.8" layer="1" roundness="33"/>
+<smd name="10_MLDO_OUT" x="3.95" y="-1.5" dx="0.8" dy="0.8" layer="1" roundness="33"/>
+<smd name="8_SLOW_CLK_IN" x="3.95" y="-3.3" dx="0.8" dy="0.8" layer="1" roundness="33"/>
+<smd name="C_GND" x="-3.95" y="3.9" dx="0.65" dy="0.65" layer="1" roundness="33"/>
+<smd name="A_GND" x="-3.95" y="2.1" dx="0.8" dy="0.8" layer="1" roundness="33"/>
+<smd name="20_GND" x="-3.95" y="0.3" dx="0.8" dy="0.8" layer="1" roundness="33"/>
+<smd name="22_VDD_IO" x="-3.95" y="-1.5" dx="0.8" dy="0.8" layer="1" roundness="33"/>
+<smd name="24_NC" x="-3.95" y="-3.3" dx="0.8" dy="0.8" layer="1" roundness="33"/>
+<smd name="7_AUD_FSYNC" x="2.7" y="-4.2" dx="0.8" dy="0.8" layer="1" roundness="33"/>
+<smd name="5_HCI_RX" x="0.9" y="-4.2" dx="0.8" dy="0.8" layer="1" roundness="33"/>
+<smd name="3_HCI_CTS" x="-0.9" y="-4.2" dx="0.8" dy="0.8" layer="1" roundness="33"/>
+<smd name="1_GND" x="-2.7" y="-4.2" dx="0.8" dy="0.8" layer="1" roundness="33"/>
+<smd name="6_HCI_TX" x="1.8" y="-3.2" dx="0.8" dy="0.8" layer="1" roundness="33"/>
+<smd name="4_HCI_RTS" x="0" y="-3.2" dx="0.8" dy="0.8" layer="1" roundness="33"/>
+<smd name="2_TX_DBG" x="-1.8" y="-3.2" dx="0.8" dy="0.8" layer="1" roundness="33"/>
+<smd name="9_NC" x="2.95" y="-2.4" dx="0.8" dy="0.8" layer="1" roundness="33"/>
+<smd name="23_NC" x="-2.95" y="-2.4" dx="0.8" dy="0.8" layer="1" roundness="33"/>
+<wire x1="-4.55" y1="-4.8" x2="-4.55" y2="4.8" width="0.127" layer="21"/>
+<smd name="21_NC" x="-2.95" y="-0.6" dx="0.8" dy="0.8" layer="1" roundness="33"/>
+<smd name="11_CL1.5_LDO_IN" x="2.95" y="-0.6" dx="0.8" dy="0.8" layer="1" roundness="33"/>
+<smd name="16_NSHUTD" x="0" y="0.2" dx="0.8" dy="0.8" layer="1" roundness="33"/>
+<smd name="18_AUD_IN" x="-1.8" y="0.2" dx="0.8" dy="0.8" layer="1" roundness="33"/>
+<smd name="14_GND" x="1.8" y="0.2" dx="0.8" dy="0.8" layer="1" roundness="33"/>
+<smd name="19_AUD_CLK" x="-2.7" y="1.2" dx="0.8" dy="0.8" layer="1" roundness="33"/>
+<smd name="17_AUD_OUT" x="-0.9" y="1.2" dx="0.8" dy="0.8" layer="1" roundness="33"/>
+<smd name="15_MLDO_IN" x="0.9" y="1.2" dx="0.8" dy="0.8" layer="1" roundness="33"/>
+<smd name="13_NC" x="2.7" y="1.2" dx="0.8" dy="0.8" layer="1" roundness="33"/>
+<text x="-4.55" y="4.8" size="0.254" layer="25">&gt;Name</text>
+<text x="-4.55" y="-5.05" size="0.254" layer="27">value</text>
+<wire x1="-2.55" y1="4.8" x2="-2.55" y2="1.7" width="0.127" layer="21"/>
+<wire x1="-2.55" y1="1.7" x2="2.55" y2="1.7" width="0.127" layer="21"/>
+<wire x1="2.55" y1="1.7" x2="2.55" y2="4.8" width="0.127" layer="21"/>
+</package>
+</packages>
+<symbols>
+<symbol name="PAN132X">
+<wire x1="-17.78" y1="22.86" x2="17.78" y2="22.86" width="0.254" layer="94"/>
+<wire x1="17.78" y1="22.86" x2="17.78" y2="-22.86" width="0.254" layer="94"/>
+<wire x1="17.78" y1="-22.86" x2="-17.78" y2="-22.86" width="0.254" layer="94"/>
+<wire x1="-17.78" y1="-22.86" x2="-17.78" y2="22.86" width="0.254" layer="94"/>
+<pin name="GND" x="-22.86" y="0" length="middle"/>
+<pin name="AUD_IN" x="22.86" y="-15.24" length="middle" rot="R180"/>
+<pin name="AUD_CLK" x="22.86" y="-5.08" length="middle" rot="R180"/>
+<pin name="AUD_OUT" x="22.86" y="-20.32" length="middle" rot="R180"/>
+<pin name="VDD_IO" x="-22.86" y="5.08" length="middle"/>
+<pin name="HCI_RTS" x="22.86" y="10.16" length="middle" rot="R180"/>
+<pin name="HCI_RX" x="22.86" y="5.08" length="middle" rot="R180"/>
+<pin name="HXI_TX" x="22.86" y="0" length="middle" rot="R180"/>
+<pin name="AUD_FSYNC" x="22.86" y="-10.16" length="middle" rot="R180"/>
+<pin name="HCI_CTS" x="22.86" y="15.24" length="middle" rot="R180"/>
+<pin name="TX_DBG" x="22.86" y="20.32" length="middle" rot="R180"/>
+<pin name="CL1.5_LDO_IN" x="-22.86" y="10.16" length="middle"/>
+<pin name="NSHUTD" x="-22.86" y="-10.16" length="middle"/>
+<pin name="MLDO_IN" x="-22.86" y="20.32" length="middle"/>
+<pin name="MLDO_OUT" x="-22.86" y="15.24" length="middle"/>
+<pin name="SLOW_CLK_IN" x="-22.86" y="-5.08" length="middle"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="PAN132X">
+<gates>
+<gate name="G$1" symbol="PAN132X" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="BOARD">
+<connects>
+<connect gate="G$1" pin="AUD_CLK" pad="19_AUD_CLK"/>
+<connect gate="G$1" pin="AUD_FSYNC" pad="7_AUD_FSYNC"/>
+<connect gate="G$1" pin="AUD_IN" pad="18_AUD_IN"/>
+<connect gate="G$1" pin="AUD_OUT" pad="17_AUD_OUT"/>
+<connect gate="G$1" pin="CL1.5_LDO_IN" pad="11_CL1.5_LDO_IN"/>
+<connect gate="G$1" pin="GND" pad="1_GND 12_GND 14_GND 20_GND A_GND B_GND C_GND D_GND"/>
+<connect gate="G$1" pin="HCI_CTS" pad="3_HCI_CTS"/>
+<connect gate="G$1" pin="HCI_RTS" pad="4_HCI_RTS"/>
+<connect gate="G$1" pin="HCI_RX" pad="5_HCI_RX"/>
+<connect gate="G$1" pin="HXI_TX" pad="6_HCI_TX"/>
+<connect gate="G$1" pin="MLDO_IN" pad="15_MLDO_IN"/>
+<connect gate="G$1" pin="MLDO_OUT" pad="10_MLDO_OUT"/>
+<connect gate="G$1" pin="NSHUTD" pad="16_NSHUTD"/>
+<connect gate="G$1" pin="SLOW_CLK_IN" pad="8_SLOW_CLK_IN"/>
+<connect gate="G$1" pin="TX_DBG" pad="2_TX_DBG"/>
+<connect gate="G$1" pin="VDD_IO" pad="22_VDD_IO"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+</drawing>
+</eagle>

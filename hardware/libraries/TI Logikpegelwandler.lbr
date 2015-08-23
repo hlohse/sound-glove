@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE eagle SYSTEM "eagle.dtd">
+<eagle version="7.2.0">
+<drawing>
+<settings>
+<setting alwaysvectorfont="no"/>
+<setting verticaltext="up"/>
+</settings>
+<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.1" altunitdist="mm" altunit="mm"/>
+<layers>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
+<layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+</layers>
+<library>
+<packages>
+<package name="R-PVQFN-N24">
+<smd name="13_GND" x="2.75" y="0.75" dx="0.8" dy="0.23" layer="1"/>
+<smd name="12_GND" x="2.75" y="-0.75" dx="0.8" dy="0.23" layer="1"/>
+<smd name="24_VCCB" x="-2.75" y="0.75" dx="0.8" dy="0.23" layer="1"/>
+<smd name="1_VCCA" x="-2.75" y="-0.75" dx="0.8" dy="0.23" layer="1"/>
+<smd name="18_B4" x="0.25" y="1.75" dx="0.23" dy="0.8" layer="1"/>
+<smd name="7_A5" x="0.25" y="-1.75" dx="0.23" dy="0.8" layer="1"/>
+<smd name="17_B5" x="0.75" y="1.75" dx="0.23" dy="0.8" layer="1"/>
+<smd name="16_B6" x="1.25" y="1.75" dx="0.23" dy="0.8" layer="1"/>
+<smd name="15_B7" x="1.75" y="1.75" dx="0.23" dy="0.8" layer="1"/>
+<smd name="14_B8" x="2.25" y="1.75" dx="0.23" dy="0.8" layer="1"/>
+<smd name="19_B3" x="-0.25" y="1.75" dx="0.23" dy="0.8" layer="1"/>
+<smd name="20_B2" x="-0.75" y="1.75" dx="0.23" dy="0.8" layer="1"/>
+<smd name="21_B1" x="-1.25" y="1.75" dx="0.23" dy="0.8" layer="1"/>
+<smd name="22_OE#" x="-1.75" y="1.75" dx="0.23" dy="0.8" layer="1"/>
+<smd name="23_VCCB" x="-2.25" y="1.75" dx="0.23" dy="0.8" layer="1"/>
+<smd name="8_A6" x="0.75" y="-1.75" dx="0.23" dy="0.8" layer="1"/>
+<smd name="9_A7" x="1.25" y="-1.75" dx="0.23" dy="0.8" layer="1"/>
+<smd name="10_A8" x="1.75" y="-1.75" dx="0.23" dy="0.8" layer="1"/>
+<smd name="11_GND" x="2.25" y="-1.75" dx="0.23" dy="0.8" layer="1"/>
+<smd name="6_A4" x="-0.25" y="-1.75" dx="0.23" dy="0.8" layer="1"/>
+<smd name="5_A3" x="-0.75" y="-1.75" dx="0.23" dy="0.8" layer="1"/>
+<smd name="4_A2" x="-1.25" y="-1.75" dx="0.23" dy="0.8" layer="1"/>
+<smd name="3_A1" x="-1.75" y="-1.75" dx="0.23" dy="0.8" layer="1"/>
+<smd name="2_DIR" x="-2.25" y="-1.75" dx="0.23" dy="0.8" layer="1"/>
+<smd name="EP_7" x="0" y="0" dx="4.05" dy="2.05" layer="1"/>
+<smd name="EP_1" x="-2.75" y="0.27" dx="0.8" dy="0.23" layer="1"/>
+<smd name="EP_2" x="-2.75" y="-0.27" dx="0.8" dy="0.23" layer="1"/>
+<smd name="EP_3" x="2.75" y="0.27" dx="0.8" dy="0.23" layer="1"/>
+<smd name="EP_4" x="2.75" y="-0.27" dx="0.8" dy="0.23" layer="1"/>
+<wire x1="-2.83" y1="1.83" x2="2.83" y2="1.83" width="0" layer="21"/>
+<wire x1="2.83" y1="1.83" x2="2.83" y2="-1.83" width="0" layer="21"/>
+<wire x1="2.83" y1="-1.83" x2="-2.68" y2="-1.83" width="0" layer="21"/>
+<wire x1="-2.68" y1="-1.83" x2="-2.83" y2="-1.83" width="0" layer="21"/>
+<wire x1="-2.83" y1="-1.83" x2="-2.83" y2="-1.68" width="0" layer="21"/>
+<smd name="EP_6" x="2.19" y="0" dx="0.33" dy="0.77" layer="1"/>
+<smd name="EP_5" x="-2.19" y="0" dx="0.33" dy="0.77" layer="1"/>
+<wire x1="-2.83" y1="-1.68" x2="-2.83" y2="1.83" width="0" layer="21"/>
+<wire x1="-2.83" y1="-1.68" x2="-2.68" y2="-1.83" width="0" layer="21"/>
+</package>
+<package name="R-PVQFN-N16">
+<smd name="PAD" x="0" y="0" dx="2.55" dy="2.05" layer="1"/>
+<smd name="4_A3" x="-0.25" y="-1.725" dx="0.28" dy="0.85" layer="1"/>
+<smd name="13_B3" x="-0.25" y="1.725" dx="0.28" dy="0.85" layer="1"/>
+<smd name="12_B4" x="0.25" y="1.725" dx="0.28" dy="0.85" layer="1"/>
+<smd name="11_B5" x="0.75" y="1.725" dx="0.28" dy="0.85" layer="1"/>
+<smd name="14_B2" x="-0.75" y="1.725" dx="0.28" dy="0.85" layer="1"/>
+<smd name="15_VCCB" x="-1.25" y="1.725" dx="0.28" dy="0.85" layer="1"/>
+<smd name="10_B6" x="1.25" y="1.725" dx="0.28" dy="0.85" layer="1"/>
+<smd name="3_A2" x="-0.75" y="-1.725" dx="0.28" dy="0.85" layer="1"/>
+<smd name="5_A4" x="0.25" y="-1.725" dx="0.28" dy="0.85" layer="1"/>
+<smd name="6_A5" x="0.75" y="-1.725" dx="0.28" dy="0.85" layer="1"/>
+<smd name="7_A6" x="1.25" y="-1.725" dx="0.28" dy="0.85" layer="1"/>
+<smd name="2_VCCA" x="-1.25" y="-1.725" dx="0.28" dy="0.85" layer="1"/>
+<smd name="16_B1" x="-1.975" y="0.75" dx="0.28" dy="0.85" layer="1" rot="R90"/>
+<smd name="1_A1" x="-1.975" y="-0.75" dx="0.28" dy="0.85" layer="1" rot="R90"/>
+<smd name="9_GND" x="1.975" y="0.75" dx="0.28" dy="0.85" layer="1" rot="R90"/>
+<smd name="8_OE" x="1.975" y="-0.75" dx="0.28" dy="0.85" layer="1" rot="R90"/>
+<wire x1="-2" y1="1.75" x2="2" y2="1.75" width="0.127" layer="21"/>
+<wire x1="2" y1="-1.75" x2="-2" y2="-1.75" width="0.127" layer="21"/>
+<wire x1="-2" y1="-1.75" x2="-2" y2="-1.2" width="0.127" layer="21"/>
+<wire x1="-2" y1="-1.2" x2="-2" y2="1.75" width="0.127" layer="21"/>
+<wire x1="2" y1="1.75" x2="2" y2="-1.75" width="0.127" layer="21"/>
+<wire x1="-2" y1="-1.2" x2="-1.5" y2="-1.7" width="0.127" layer="21"/>
+</package>
+</packages>
+<symbols>
+<symbol name="LOGIKPEGELWANDLER">
+<wire x1="-10.16" y1="30.48" x2="10.16" y2="30.48" width="0.254" layer="94"/>
+<wire x1="10.16" y1="30.48" x2="10.16" y2="-30.48" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-30.48" x2="-10.16" y2="-30.48" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-30.48" x2="-10.16" y2="30.48" width="0.254" layer="94"/>
+<pin name="VCCA" x="-15.24" y="27.94" length="middle"/>
+<pin name="DIR" x="-15.24" y="22.86" length="middle"/>
+<pin name="OE#" x="-15.24" y="17.78" length="middle"/>
+<pin name="A1" x="-15.24" y="7.62" length="middle"/>
+<pin name="A2" x="-15.24" y="2.54" length="middle"/>
+<pin name="A3" x="-15.24" y="-2.54" length="middle"/>
+<pin name="A4" x="-15.24" y="-7.62" length="middle"/>
+<pin name="A5" x="-15.24" y="-12.7" length="middle"/>
+<pin name="A6" x="-15.24" y="-17.78" length="middle"/>
+<pin name="A7" x="-15.24" y="-22.86" length="middle"/>
+<pin name="A8" x="-15.24" y="-27.94" length="middle"/>
+<pin name="VCCB" x="15.24" y="27.94" length="middle" rot="R180"/>
+<pin name="GND" x="15.24" y="22.86" length="middle" rot="R180"/>
+<pin name="EP" x="15.24" y="17.78" length="middle" rot="R180"/>
+<pin name="B1" x="15.24" y="7.62" length="middle" rot="R180"/>
+<pin name="B2" x="15.24" y="2.54" length="middle" rot="R180"/>
+<pin name="B3" x="15.24" y="-2.54" length="middle" rot="R180"/>
+<pin name="B4" x="15.24" y="-7.62" length="middle" rot="R180"/>
+<pin name="B5" x="15.24" y="-12.7" length="middle" rot="R180"/>
+<pin name="B6" x="15.24" y="-17.78" length="middle" rot="R180"/>
+<pin name="B7" x="15.24" y="-22.86" length="middle" rot="R180"/>
+<pin name="B8" x="15.24" y="-27.94" length="middle" rot="R180"/>
+</symbol>
+<symbol name="WANDLER6CH">
+<pin name="VCCA" x="-20.32" y="15.24" length="middle"/>
+<pin name="A2" x="-20.32" y="10.16" length="middle"/>
+<pin name="A3" x="-20.32" y="5.08" length="middle"/>
+<pin name="A4" x="-20.32" y="0" length="middle"/>
+<pin name="A5" x="-20.32" y="-5.08" length="middle"/>
+<pin name="A6" x="-20.32" y="-10.16" length="middle"/>
+<pin name="VCCB" x="17.78" y="15.24" length="middle" rot="R180"/>
+<pin name="B2" x="17.78" y="10.16" length="middle" rot="R180"/>
+<pin name="B3" x="17.78" y="5.08" length="middle" rot="R180"/>
+<pin name="B4" x="17.78" y="0" length="middle" rot="R180"/>
+<pin name="B5" x="17.78" y="-5.08" length="middle" rot="R180"/>
+<pin name="B6" x="17.78" y="-10.16" length="middle" rot="R180"/>
+<pin name="A1" x="-7.62" y="30.48" length="middle" rot="R270"/>
+<pin name="B1" x="5.08" y="30.48" length="middle" rot="R270"/>
+<pin name="OE" x="-7.62" y="-25.4" length="middle" rot="R90"/>
+<pin name="GND" x="5.08" y="-25.4" length="middle" rot="R90"/>
+<wire x1="-15.24" y1="-20.32" x2="12.7" y2="-20.32" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-20.32" x2="12.7" y2="25.4" width="0.254" layer="94"/>
+<wire x1="12.7" y1="25.4" x2="-15.24" y2="25.4" width="0.254" layer="94"/>
+<wire x1="-15.24" y1="25.4" x2="-15.24" y2="-20.32" width="0.254" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="LOGIKPEGELWANDLER-R-PVQFN-N24">
+<gates>
+<gate name="G$1" symbol="LOGIKPEGELWANDLER" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="R-PVQFN-N24">
+<connects>
+<connect gate="G$1" pin="A1" pad="3_A1"/>
+<connect gate="G$1" pin="A2" pad="4_A2"/>
+<connect gate="G$1" pin="A3" pad="5_A3"/>
+<connect gate="G$1" pin="A4" pad="6_A4"/>
+<connect gate="G$1" pin="A5" pad="7_A5"/>
+<connect gate="G$1" pin="A6" pad="8_A6"/>
+<connect gate="G$1" pin="A7" pad="9_A7"/>
+<connect gate="G$1" pin="A8" pad="10_A8"/>
+<connect gate="G$1" pin="B1" pad="21_B1"/>
+<connect gate="G$1" pin="B2" pad="20_B2"/>
+<connect gate="G$1" pin="B3" pad="19_B3"/>
+<connect gate="G$1" pin="B4" pad="18_B4"/>
+<connect gate="G$1" pin="B5" pad="17_B5"/>
+<connect gate="G$1" pin="B6" pad="16_B6"/>
+<connect gate="G$1" pin="B7" pad="15_B7"/>
+<connect gate="G$1" pin="B8" pad="14_B8"/>
+<connect gate="G$1" pin="DIR" pad="2_DIR"/>
+<connect gate="G$1" pin="EP" pad="EP_1 EP_2 EP_3 EP_4 EP_5 EP_6 EP_7"/>
+<connect gate="G$1" pin="GND" pad="11_GND 12_GND 13_GND"/>
+<connect gate="G$1" pin="OE#" pad="22_OE#"/>
+<connect gate="G$1" pin="VCCA" pad="1_VCCA"/>
+<connect gate="G$1" pin="VCCB" pad="23_VCCB 24_VCCB"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="LOGIKPEGELWANDLER-6CH">
+<gates>
+<gate name="G$1" symbol="WANDLER6CH" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="R-PVQFN-N16">
+<connects>
+<connect gate="G$1" pin="A1" pad="1_A1"/>
+<connect gate="G$1" pin="A2" pad="3_A2"/>
+<connect gate="G$1" pin="A3" pad="4_A3"/>
+<connect gate="G$1" pin="A4" pad="5_A4"/>
+<connect gate="G$1" pin="A5" pad="6_A5"/>
+<connect gate="G$1" pin="A6" pad="7_A6"/>
+<connect gate="G$1" pin="B1" pad="16_B1"/>
+<connect gate="G$1" pin="B2" pad="14_B2"/>
+<connect gate="G$1" pin="B3" pad="13_B3"/>
+<connect gate="G$1" pin="B4" pad="12_B4"/>
+<connect gate="G$1" pin="B5" pad="11_B5"/>
+<connect gate="G$1" pin="B6" pad="10_B6"/>
+<connect gate="G$1" pin="GND" pad="9_GND PAD"/>
+<connect gate="G$1" pin="OE" pad="8_OE"/>
+<connect gate="G$1" pin="VCCA" pad="2_VCCA"/>
+<connect gate="G$1" pin="VCCB" pad="15_VCCB"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+</drawing>
+</eagle>
