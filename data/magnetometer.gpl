@@ -1,0 +1,203 @@
+set terminal svg size 800,600
+set key left box
+set view equal xyz
+set grid
+set grid ztics
+range = 7000
+set xrange [-range:range]
+set yrange [-range:range]
+set zrange [-range:range]
+set xlabel "X" font "Courier,8"
+set ylabel "Y" font "Courier,12"
+set zlabel "Z" font "Courier,12"
+set xtics font "Courier,12"
+set ytics font "Courier,12"
+set ztics font "Courier,12"
+set clip two
+
+axis = 'axis.csv'
+
+hand_raw_x    = 'hand_m_raw_x.csv'
+hand_raw_y    = 'hand_m_raw_y.csv'
+hand_raw_z    = 'hand_m_raw_z.csv'
+hand_raw_all  = 'hand_m_raw_all.csv'
+hand_raw_axis = 'hand_m_raw_axis.csv'
+lower_arm_raw_x    = 'lower_arm_m_raw_x.csv'
+lower_arm_raw_y    = 'lower_arm_m_raw_y.csv'
+lower_arm_raw_z    = 'lower_arm_m_raw_z.csv'
+lower_arm_raw_all  = 'lower_arm_m_raw_all.csv'
+lower_arm_raw_axis = 'lower_arm_m_raw_axis.csv'
+upper_arm_raw_x    = 'upper_arm_m_raw_x.csv'
+upper_arm_raw_y    = 'upper_arm_m_raw_y.csv'
+upper_arm_raw_z    = 'upper_arm_m_raw_z.csv'
+upper_arm_raw_all  = 'upper_arm_m_raw_all.csv'
+upper_arm_raw_axis = 'upper_arm_m_raw_axis.csv'
+
+hand_perpendicular_x    = 'hand_m_perpendicular_x.csv'
+hand_perpendicular_y    = 'hand_m_perpendicular_y.csv'
+hand_perpendicular_z    = 'hand_m_perpendicular_z.csv'
+hand_perpendicular_all  = 'hand_m_perpendicular_all.csv'
+hand_perpendicular_axis = 'hand_m_perpendicular_axis.csv'
+lower_arm_perpendicular_x    = 'lower_arm_m_perpendicular_x.csv'
+lower_arm_perpendicular_y    = 'lower_arm_m_perpendicular_y.csv'
+lower_arm_perpendicular_z    = 'lower_arm_m_perpendicular_z.csv'
+lower_arm_perpendicular_all  = 'lower_arm_m_perpendicular_all.csv'
+lower_arm_perpendicular_axis = 'lower_arm_m_perpendicular_axis.csv'
+upper_arm_perpendicular_x    = 'upper_arm_m_perpendicular_x.csv'
+upper_arm_perpendicular_y    = 'upper_arm_m_perpendicular_y.csv'
+upper_arm_perpendicular_z    = 'upper_arm_m_perpendicular_z.csv'
+upper_arm_perpendicular_all  = 'upper_arm_m_perpendicular_all.csv'
+upper_arm_perpendicular_axis = 'upper_arm_m_perpendicular_axis.csv'
+
+hand_calibrated_x   = 'hand_m_calibrated_x.csv'
+hand_calibrated_y   = 'hand_m_calibrated_y.csv'
+hand_calibrated_z   = 'hand_m_calibrated_z.csv'
+hand_calibrated_all = 'hand_m_calibrated_all.csv'
+hand_calibrated_axis = 'hand_m_calibrated_axis.csv'
+lower_arm_calibrated_x    = 'lower_arm_m_calibrated_x.csv'
+lower_arm_calibrated_y    = 'lower_arm_m_calibrated_y.csv'
+lower_arm_calibrated_z    = 'lower_arm_m_calibrated_z.csv'
+lower_arm_calibrated_all  = 'lower_arm_m_calibrated_all.csv'
+lower_arm_calibrated_axis = 'lower_arm_m_calibrated_axis.csv'
+upper_arm_calibrated_x    = 'upper_arm_m_calibrated_x.csv'
+upper_arm_calibrated_y    = 'upper_arm_m_calibrated_y.csv'
+upper_arm_calibrated_z    = 'upper_arm_m_calibrated_z.csv'
+upper_arm_calibrated_all  = 'upper_arm_m_calibrated_all.csv'
+upper_arm_calibrated_axis = 'upper_arm_m_calibrated_axis.csv'
+
+set title "Magnetometer Hand, Raw" font "Courier,20"
+set output "hand_raw.svg"
+set multiplot
+splot hand_raw_all using 1:2:3 w l lc rgb '#B0B0B0' t ""
+splot hand_raw_x   using 1:2:3 w l lc rgb '#FF0000' t ""
+splot hand_raw_y   using 1:2:3 w l lc rgb '#00FF00' t ""
+splot hand_raw_z   using 1:2:3 w l lc rgb '#0000FF' t ""
+splot axis every ::0::1 using 1:2:3 w l lw 4 lc rgb '#B00000' t ""
+splot axis every ::2::3 using 1:2:3 w l lw 4 lc rgb '#00B000' t ""
+splot axis every ::4::5 using 1:2:3 w l lw 4 lc rgb '#0000B0' t ""
+splot hand_raw_axis every ::0::1 using 1:2:3 w l lw 4 lc rgb '#FF0000' t ""
+splot hand_raw_axis every ::2::3 using 1:2:3 w l lw 4 lc rgb '#00FF00' t ""
+splot hand_raw_axis every ::4::5 using 1:2:3 w l lw 4 lc rgb '#0000FF' t ""
+unset multiplot
+
+set title "Magnetometer Forearm, Raw" font "Courier,20"
+set output "lower_arm_raw.svg"
+set multiplot
+splot lower_arm_raw_all using 1:2:3 w l lc rgb '#B0B0B0' t ""
+splot lower_arm_raw_x   using 1:2:3 w l lc rgb '#FF0000' t ""
+splot lower_arm_raw_y   using 1:2:3 w l lc rgb '#00FF00' t ""
+splot lower_arm_raw_z   using 1:2:3 w l lc rgb '#0000FF' t ""
+splot axis every ::0::1 using 1:2:3 w l lw 4 lc rgb '#B00000' t ""
+splot axis every ::2::3 using 1:2:3 w l lw 4 lc rgb '#00B000' t ""
+splot axis every ::4::5 using 1:2:3 w l lw 4 lc rgb '#0000B0' t ""
+splot lower_arm_raw_axis every ::0::1 using 1:2:3 w l lw 4 lc rgb '#FF0000' t ""
+splot lower_arm_raw_axis every ::2::3 using 1:2:3 w l lw 4 lc rgb '#00FF00' t ""
+splot lower_arm_raw_axis every ::4::5 using 1:2:3 w l lw 4 lc rgb '#0000FF' t ""
+unset multiplot
+
+set title "Magnetometer Upper Arm, Raw" font "Courier,20"
+set output "upper_arm_raw.svg"
+set multiplot
+splot upper_arm_raw_all using 1:2:3 w l lc rgb '#B0B0B0' t ""
+splot upper_arm_raw_x   using 1:2:3 w l lc rgb '#FF0000' t ""
+splot upper_arm_raw_y   using 1:2:3 w l lc rgb '#00FF00' t ""
+splot upper_arm_raw_z   using 1:2:3 w l lc rgb '#0000FF' t ""
+splot axis every ::0::1 using 1:2:3 w l lw 4 lc rgb '#B00000' t ""
+splot axis every ::2::3 using 1:2:3 w l lw 4 lc rgb '#00B000' t ""
+splot axis every ::4::5 using 1:2:3 w l lw 4 lc rgb '#0000B0' t ""
+splot upper_arm_raw_axis every ::0::1 using 1:2:3 w l lw 4 lc rgb '#FF0000' t ""
+splot upper_arm_raw_axis every ::2::3 using 1:2:3 w l lw 4 lc rgb '#00FF00' t ""
+splot upper_arm_raw_axis every ::4::5 using 1:2:3 w l lw 4 lc rgb '#0000FF' t ""
+unset multiplot
+
+set title "Magnetometer Hand, Perpendicular" font "Courier,20"
+set output "hand_perpendicular.svg"
+set multiplot
+splot hand_perpendicular_all using 1:2:3 w l lc rgb '#B0B0B0' t ""
+splot hand_perpendicular_x   using 1:2:3 w l lc rgb '#FF0000' t ""
+splot hand_perpendicular_y   using 1:2:3 w l lc rgb '#00FF00' t ""
+splot hand_perpendicular_z   using 1:2:3 w l lc rgb '#0000FF' t ""
+splot axis every ::0::1 using 1:2:3 w l lw 4 lc rgb '#B00000' t ""
+splot axis every ::2::3 using 1:2:3 w l lw 4 lc rgb '#00B000' t ""
+splot axis every ::4::5 using 1:2:3 w l lw 4 lc rgb '#0000B0' t ""
+splot hand_perpendicular_axis every ::0::1 using 1:2:3 w l lw 4 lc rgb '#FF0000' t ""
+splot hand_perpendicular_axis every ::2::3 using 1:2:3 w l lw 4 lc rgb '#00FF00' t ""
+splot hand_perpendicular_axis every ::4::5 using 1:2:3 w l lw 4 lc rgb '#0000FF' t ""
+unset multiplot
+
+set title "Magnetometer Forearm, Perpendicular" font "Courier,20"
+set output "lower_arm_perpendicular.svg"
+set multiplot
+splot lower_arm_perpendicular_all using 1:2:3 w l lc rgb '#B0B0B0' t ""
+splot lower_arm_perpendicular_x   using 1:2:3 w l lc rgb '#FF0000' t ""
+splot lower_arm_perpendicular_y   using 1:2:3 w l lc rgb '#00FF00' t ""
+splot lower_arm_perpendicular_z   using 1:2:3 w l lc rgb '#0000FF' t ""
+splot axis every ::0::1 using 1:2:3 w l lw 4 lc rgb '#B00000' t ""
+splot axis every ::2::3 using 1:2:3 w l lw 4 lc rgb '#00B000' t ""
+splot axis every ::4::5 using 1:2:3 w l lw 4 lc rgb '#0000B0' t ""
+splot lower_arm_perpendicular_axis every ::0::1 using 1:2:3 w l lw 4 lc rgb '#FF0000' t ""
+splot lower_arm_perpendicular_axis every ::2::3 using 1:2:3 w l lw 4 lc rgb '#00FF00' t ""
+splot lower_arm_perpendicular_axis every ::4::5 using 1:2:3 w l lw 4 lc rgb '#0000FF' t ""
+unset multiplot
+
+set title "Magnetometer Upper Arm, Perpendicular" font "Courier,20"
+set output "upper_arm_perpendicular.svg"
+set multiplot
+splot upper_arm_perpendicular_all using 1:2:3 w l lc rgb '#B0B0B0' t ""
+splot upper_arm_perpendicular_x   using 1:2:3 w l lc rgb '#FF0000' t ""
+splot upper_arm_perpendicular_y   using 1:2:3 w l lc rgb '#00FF00' t ""
+splot upper_arm_perpendicular_z   using 1:2:3 w l lc rgb '#0000FF' t ""
+splot axis every ::0::1 using 1:2:3 w l lw 4 lc rgb '#B00000' t ""
+splot axis every ::2::3 using 1:2:3 w l lw 4 lc rgb '#00B000' t ""
+splot axis every ::4::5 using 1:2:3 w l lw 4 lc rgb '#0000B0' t ""
+splot upper_arm_perpendicular_axis every ::0::1 using 1:2:3 w l lw 4 lc rgb '#FF0000' t ""
+splot upper_arm_perpendicular_axis every ::2::3 using 1:2:3 w l lw 4 lc rgb '#00FF00' t ""
+splot upper_arm_perpendicular_axis every ::4::5 using 1:2:3 w l lw 4 lc rgb '#0000FF' t ""
+unset multiplot
+
+set title "Magnetometer Hand, Calibrated" font "Courier,20"
+set output "hand_calibrated.svg"
+set multiplot
+splot hand_calibrated_all using 1:2:3 w l lc rgb '#B0B0B0' t ""
+splot hand_calibrated_x   using 1:2:3 w l lc rgb '#FF0000' t ""
+splot hand_calibrated_y   using 1:2:3 w l lc rgb '#00FF00' t ""
+splot hand_calibrated_z   using 1:2:3 w l lc rgb '#0000FF' t ""
+splot axis every ::0::1 using 1:2:3 w l lw 4 lc rgb '#B00000' t ""
+splot axis every ::2::3 using 1:2:3 w l lw 4 lc rgb '#00B000' t ""
+splot axis every ::4::5 using 1:2:3 w l lw 4 lc rgb '#0000B0' t ""
+splot hand_calibrated_axis every ::0::1 using 1:2:3 w l lw 4 lc rgb '#FF0000' t ""
+splot hand_calibrated_axis every ::2::3 using 1:2:3 w l lw 4 lc rgb '#00FF00' t ""
+splot hand_calibrated_axis every ::4::5 using 1:2:3 w l lw 4 lc rgb '#0000FF' t ""
+unset multiplot
+
+set title "Magnetometer Forearm, Calibrated" font "Courier,20"
+set output "lower_arm_calibrated.svg"
+set multiplot
+splot lower_arm_calibrated_all using 1:2:3 w l lc rgb '#B0B0B0' t ""
+splot lower_arm_calibrated_x   using 1:2:3 w l lc rgb '#FF0000' t ""
+splot lower_arm_calibrated_y   using 1:2:3 w l lc rgb '#00FF00' t ""
+splot lower_arm_calibrated_z   using 1:2:3 w l lc rgb '#0000FF' t ""
+splot axis every ::0::1 using 1:2:3 w l lw 4 lc rgb '#B00000' t ""
+splot axis every ::2::3 using 1:2:3 w l lw 4 lc rgb '#00B000' t ""
+splot axis every ::4::5 using 1:2:3 w l lw 4 lc rgb '#0000B0' t ""
+splot lower_arm_calibrated_axis every ::0::1 using 1:2:3 w l lw 4 lc rgb '#FF0000' t ""
+splot lower_arm_calibrated_axis every ::2::3 using 1:2:3 w l lw 4 lc rgb '#00FF00' t ""
+splot lower_arm_calibrated_axis every ::4::5 using 1:2:3 w l lw 4 lc rgb '#0000FF' t ""
+unset multiplot
+
+set title "Magnetometer Upper Arm, Calibrated" font "Courier,20"
+set output "upper_arm_calibrated.svg"
+set multiplot
+splot upper_arm_calibrated_all using 1:2:3 w l lc rgb '#B0B0B0' t ""
+splot upper_arm_calibrated_x   using 1:2:3 w l lc rgb '#FF0000' t ""
+splot upper_arm_calibrated_y   using 1:2:3 w l lc rgb '#00FF00' t ""
+splot upper_arm_calibrated_z   using 1:2:3 w l lc rgb '#0000FF' t ""
+splot axis every ::0::1 using 1:2:3 w l lw 4 lc rgb '#B00000' t ""
+splot axis every ::2::3 using 1:2:3 w l lw 4 lc rgb '#00B000' t ""
+splot axis every ::4::5 using 1:2:3 w l lw 4 lc rgb '#0000B0' t ""
+splot upper_arm_calibrated_axis every ::0::1 using 1:2:3 w l lw 4 lc rgb '#FF0000' t ""
+splot upper_arm_calibrated_axis every ::2::3 using 1:2:3 w l lw 4 lc rgb '#00FF00' t ""
+splot upper_arm_calibrated_axis every ::4::5 using 1:2:3 w l lw 4 lc rgb '#0000FF' t ""
+unset multiplot
+
+reset

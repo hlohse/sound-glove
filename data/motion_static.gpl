@@ -1,0 +1,51 @@
+set key right top opaque font ",16"
+set terminal svg size 440,320
+set encoding utf8
+set xlabel "Time [s]" font ",16"
+set xtics font ",16"
+set ytics font ",16"
+set grid
+
+file_b0_z0     = 'accuracy_b0_z0.csv'
+file_b0041_z0  = 'accuracy_b0041_z0.csv'
+file_b05_z0    = 'accuracy_b05_z0.csv'
+file_b0041_z05 = 'accuracy_b0041_z05.csv'
+
+set ylabel "Error [degree]" font ",16"
+
+set title "Static Hand Orientation Error,\nβ = 0, ζ = 0" font ",20"
+set output "error_orientation_g_hand.svg"
+plot file_b0_z0 every ::0::299 using 0:1 w l lw 1 lc rgb "black" t "roll", \
+     file_b0_z0 every ::0::299 using 0:2 w l lw 1 lc rgb "red"   t "pitch", \
+     file_b0_z0 every ::0::299 using 0:3 w l lw 1 lc rgb "blue"  t "yaw"
+
+set yrange [-5:55]
+set key center right
+set title "Static Hand Orientation Error,\nζ = 0" font ",20"
+set output "error_orientation_z0_hand.svg"
+plot file_b05_z0 every ::0::299 using 0:1 w l lw 5 lc rgb "black" t "roll, β = 0.5", \
+   file_b0041_z0 every ::0::299 using 0:1 w l  lw 1 lc rgb "black" t "roll, β = 0.041", \
+     file_b05_z0 every ::0::299 using 0:2 w l lw 5 lc rgb "red"   t "pitch, β = 0.5", \
+   file_b0041_z0 every ::0::299 using 0:2 w l  lw 1 lc rgb "red"   t "pitch, β = 0.041", \
+     file_b05_z0 every ::0::299 using 0:3 w l lw 5 lc rgb "blue"  t "yaw, β = 0.5", \
+   file_b0041_z0 every ::0::299 using 0:3 w l  lw 1 lc rgb "blue"  t "yaw, β = 0.041"
+
+set yrange [-5.5:5.5]
+set key top right
+
+set title "Static Hand Orientation Error,\nβ = 0.041, ζ = 0.5" font ",20"
+set output "error_orientation_b0041_hand.svg"
+plot file_b0041_z05 every ::0::299 using 0:1 w l lw 1 lc rgb "black" t "roll", \
+     file_b0041_z05 every ::0::299 using 0:2 w l lw 1 lc rgb "red"   t "pitch", \
+     file_b0041_z05 every ::0::299 using 0:3 w l lw 1 lc rgb "blue"  t "yaw"
+
+set ylabel "Error [cm]" font ",16"
+set yrange [-1.2:1.2]
+
+set title "Static Hand Position Error,\nβ = 0.041, ζ = 0.5" font ",20"
+set output "error_position_hand.svg"
+plot file_b0041_z05 every ::0::299 using 0:4 w l lw 1 lc rgb "black" t "x", \
+     file_b0041_z05 every ::0::299 using 0:5 w l lw 1 lc rgb "red"   t "y", \
+     file_b0041_z05 every ::0::299 using 0:6 w l lw 1 lc rgb "blue"  t "z"
+
+reset

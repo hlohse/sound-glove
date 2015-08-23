@@ -1,0 +1,24 @@
+set title "Readout Round-trip Time" font ",20"
+set key right top opaque font ",16"
+set xlabel "Readout Number" font ",16"
+set ylabel "Time [ms]" font ",16"
+set xtics font ",16"
+set ytics font ",16"
+set grid
+set xtics 0, 2000, 10000
+
+file = 'latency.csv'
+set yrange [0:60]
+stats file
+
+set terminal png size 440,300
+set output "latency.png"
+plot file every ::0::9999 w p linecolor rgb "black" t "Readout RTT", \
+     STATS_mean_y  w l lw 4 linecolor rgb "green"  t "mean"
+
+set terminal svg size 440,300
+set output "latency.svg"
+plot file every ::0::9999 w p linecolor rgb "black" t "Readout RTT", \
+     STATS_mean_y  w l lw 4 linecolor rgb "green"  t "mean"
+
+reset

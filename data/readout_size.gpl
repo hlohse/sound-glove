@@ -1,0 +1,29 @@
+set key right opaque font ",16"
+set terminal svg size 440,320
+
+set xlabel "Readout Number" font ",16"
+set ylabel "Readout Size [byte]" font ",16"
+set xtics font ",16"
+set ytics font ",16"
+set grid
+set xrange [0:1500]
+set yrange [30:90]
+set xtics 0, 250, 1500
+
+file_static  = 'readout_sizes_static.csv'
+file_dynamic = 'readout_sizes_marg_05_0_ext_t0.csv'
+
+set title "Compressed Readout Sizes" font ",20"
+set output "readout_size.svg"
+
+stats file_static
+static_mean  = STATS_mean_y
+stats file_dynamic
+dynamic_mean = STATS_mean_y
+
+plot file_static  w p linecolor rgb "black"     t "Stationary",\
+     file_dynamic w p linecolor rgb "red"       t "Shoulder Rotation",\
+     static_mean w l lw 5 linecolor rgb "blue" t "Stationary mean",\
+     dynamic_mean w l lw 5 linecolor rgb "orange" t "Shoulder Rotation mean"
+     
+reset
