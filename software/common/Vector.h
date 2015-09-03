@@ -1,4 +1,5 @@
-#pragma once
+#ifndef VECTOR_H_
+#define VECTOR_H_
 
 #include "Export.h"
 #include "Platform.h"
@@ -192,3 +193,5 @@ Vector operator*(const Matrix& matrix) const
 }
 
 };
+
+#endif // VECTOR_H_
